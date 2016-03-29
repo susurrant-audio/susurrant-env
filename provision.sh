@@ -10,9 +10,9 @@ install_essentia() {
     cd ~
     git clone https://github.com/MTG/essentia.git
     cd essentia
-    ./waf configure --mode=release --build-static --with-python --with-cpptests --with-examples --with-vamp --with-gaia
-    ./waf
-    sudo ./waf install
+    ./waf configure --mode=release --build-static --with-python --with-cpptests --with-examples --with-vamp --with-gaia && \
+        ./waf && \
+        sudo ./waf install
 }
 
 python -c 'import essentia' || install_essentia
