@@ -8,9 +8,9 @@ sudo apt-get install -y build-essential libyaml-dev libfftw3-dev libavcodec-dev 
 
 install_essentia() {
     cd ~
-    git clone https://github.com/MTG/essentia.git
+    git clone -b v2.1_beta2 https://github.com/MTG/essentia.git
     cd essentia
-    ./waf configure --mode=release --build-static --with-python --with-cpptests --with-examples --with-vamp --with-gaia && \
+    ./waf configure --mode=release --build-static --with-python --with-cpptests --with-examples --with-vamp && \
         ./waf && \
         sudo ./waf install
 }
