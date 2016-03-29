@@ -3,7 +3,7 @@
 sudo apt-get update
 sudo apt-get install -y build-essential libyaml-dev libfftw3-dev libavcodec-dev libavformat-dev \
      libavutil-dev libavresample-dev python-dev libsamplerate0-dev libtag1-dev \
-     git python-pip \
+     git python-pip python-h5py \
      python-numpy-dev python-numpy python-yaml
 
 install_essentia() {
@@ -13,6 +13,7 @@ install_essentia() {
     else
         git clone -b v2.1_beta2 https://github.com/MTG/essentia.git;
     fi
+    cd essentia
     ./waf configure --mode=release --build-static --with-python --with-cpptests --with-examples --with-vamp && \
         ./waf && \
         sudo ./waf install
