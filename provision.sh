@@ -3,7 +3,7 @@
 sudo apt-get update
 sudo apt-get install -y build-essential libyaml-dev libfftw3-dev libavcodec-dev libavformat-dev \
      libavutil-dev libavresample-dev python-dev libsamplerate0-dev libtag1-dev \
-     git python-pip python-h5py \
+     git python-pip python-h5py python-sklearn \
      python-numpy-dev python-numpy python-yaml
 
 install_essentia() {
